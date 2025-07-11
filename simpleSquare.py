@@ -1,4 +1,4 @@
-from pyembroidery import EmbPattern, write_pes
+from pyembroidery import EmbPattern, write_pes, STITCH
 
 # Create a new embroidery pattern
 pattern = EmbPattern()
@@ -14,7 +14,7 @@ square_points = [
 
 # Add the points as simple running stitches
 for x, y in square_points:
-    pattern.add_stitch_absolute("STITCH", x, y)
+    pattern.add_stitch_absolute(STITCH, x, y)
 
 # End the pattern
 pattern.end()
